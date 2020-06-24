@@ -58,7 +58,7 @@ func main() {
 	//sig := <-sigChan // aus Channel lesen
 
 	srv.Close()
-	close(sigChan // könnte ich auch nach dem make(chan..) mit defer close(sigChan) machen
+	close(sigChan) // könnte ich auch nach dem make(chan..) mit defer close(sigChan) machen
 
 	logger.Print("stopping server") // kommt an dieser Stelle nicht dahin, wenn der Dienst mit Strg+c "abgeschossen" wird, auch nicht mit defer()
 
